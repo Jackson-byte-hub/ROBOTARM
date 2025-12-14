@@ -55,9 +55,7 @@ Expected:
 Demo Instruction:
 1. bringup (ros2_control)
 
-```bash
-ros2 launch arm_bringup bringup.launch.py
-''
+Run `ros2 control list_controllers` to verify controllers.
 
 Verify:
 
