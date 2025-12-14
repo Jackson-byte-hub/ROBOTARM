@@ -95,3 +95,30 @@ Click Execute
 ✔ Robot model moves
 ✔ Real Dynamixel motors move
 ✔ Rviz2 model move accordingly
+
+3. Additional commands for debug
+
+Build/Rebuild:
+
+colcon build --symlink-install
+Remove previous build for a full rebuild:
+cd ~/xl430_arm_ws
+rm -rf build install log
+
+Sourcing: (you have to do this after open a new terminal or rebuild
+
+source /opt/ros/jazzy/setup.bash (for ROS2)
+source install/setup.bash (for the installs)
+
+Send tradjectory directly to move the servos:
+
+ros2 topic pub /arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
+joint_names:
+- joint_1
+- joint_2
+- joint_3
+points:
+- positions: [0, 0, 0]
+  time_from_start: {sec: 1, nanosec: 0}
+"
+
