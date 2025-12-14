@@ -55,7 +55,9 @@ Expected:
 Demo Instruction:
 1. bringup (ros2_control)
 
+```bash
 ros2 launch arm_bringup bringup.launch.py
+''
 
 Verify:
 
@@ -156,11 +158,17 @@ Tune XL430 PID gains (Wizard or YAML)
  👤 Author
 
 Jackson
+
 Robotics / ROS 2 / Embedded Systems
+
 GitHub: https://github.com/Jackson-byte-hub
+
 Ref:
 
 https://github.com/ros-controls/ros2_control_demos/blob/master/example_7/doc/userdoc.rst
+
 https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface?tab=readme-ov-file
+
 https://github.com/ROBOTIS-GIT/DynamixelSDK
+
 https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface/blob/main/param/dxl_model/2xc430_w250.model
