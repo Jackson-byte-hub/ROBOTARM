@@ -12,19 +12,7 @@ MoveIt 2 motion planning and execution
 Scalable from 1 DOF → 3 DOF → 6 DOF
 
 🧱 Repository Structure
-
-ROBOTARM/
-├── src/
-│   ├── arm_description/        # URDF / Xacro
-│   ├── arm_bringup/             # ros2_control bringup
-│   ├── arm_moveit_config/       # MoveIt 2 configuration
-│   ├── dynamixel_hardware_interface/
-│   ├── dynamixel_interfaces/
-│   └── DynamixelSDK/
-├── install/
-├── build/
-├── log/
-└── README.md
+<img width="493" height="256" alt="image" src="https://github.com/user-attachments/assets/1906cba9-de58-47c4-b016-8431de0f52b4" />
 
 ⚙️ System Requirements
 | Component | Version           |
