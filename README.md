@@ -12,6 +12,7 @@ MoveIt 2 motion planning and execution
 Scalable from 1 DOF → 3 DOF → 6 DOF
 
 🧱 Repository Structure
+
 ROBOTARM/
 ├── src/
 │   ├── arm_description/        # URDF / Xacro
