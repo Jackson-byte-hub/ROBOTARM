@@ -121,4 +121,7 @@ points:
 - positions: [0, 0, 0]
   time_from_start: {sec: 1, nanosec: 0}
 "
+Control GUI:
+sudo apt install ros-jazzy-rqt-joint-controller-manager
+rqt
 
