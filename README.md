@@ -26,20 +26,19 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
 
 📦 Dependencies
 
-sudo apt update
-sudo apt install -y \
+`sudo apt update`
+`sudo apt install -y \
   ros-jazzy-desktop \
   ros-jazzy-ros2-control \
   ros-jazzy-ros2-controllers \
   ros-jazzy-moveit \
   ros-jazzy-xacro \
-  ros-jazzy-joint-state-publisher-gui
-
+  ros-jazzy-joint-state-publisher-gui`
 🛠️ Build the Workspace
 
-cd ~/xl430_arm_ws
-colcon build --symlink-install
-source install/setup.bash
+`cd ~/xl430_arm_ws`
+`colcon build --symlink-install`
+`source install/setup.bash`
 
 🔌 Hardware Setup
 1. Set unique IDs for each XL430 using Dynamixel Wizard 2.0
@@ -47,7 +46,7 @@ source install/setup.bash
 3. Connect OpenRB/U2D2 via USB
 
 Verify device:
-ls /dev/ttyACM*
+`ls /dev/ttyACM*`
 
 Expected:
 /dev/ttyACM0
@@ -55,13 +54,13 @@ Expected:
 Demo Instruction:
 1. bringup (ros2_control)
 
-Run `ros2 control list_controllers` to verify controllers.
+Run `ros2 launch arm_bringup bringup.launch.py`
 
 Verify:
 
-ros2 control list_hardware_interfaces
+`ros2 control list_hardware_interfaces`
 
-ros2 control list_controllers
+`ros2 control list_controllers`
 
 Exepected:
 
@@ -71,7 +70,7 @@ arm_controller           active
 
 2.1. 🎮 Manual Control (RQT)
 
-ros2 run rqt_joint_trajectory_controller rqt_joint_trajectory_controller
+`ros2 run rqt_joint_trajectory_controller rqt_joint_trajectory_controller`
 
 - Select arm_controller
 - Move joints smoothly
@@ -80,7 +79,7 @@ ros2 run rqt_joint_trajectory_controller rqt_joint_trajectory_controller
 2.2. 🤖 MoveIt 2 Demo
 Launch full MoveIt stack
 
-ros2 launch arm_moveit_config demo.launch.py
+`ros2 launch arm_moveit_config demo.launch.py`
 
 This starts:
 - move_group
@@ -104,22 +103,23 @@ Click Execute
 
 Build/Rebuild:
 
-colcon build --symlink-install
+`colcon build --symlink-install`
 
 Remove previous build for a full rebuild:
 
-cd ~/xl430_arm_ws
+`cd ~/xl430_arm_ws`
 
-rm -rf build install log
+`rm -rf build install log`
 
 Sourcing: (you have to do this after open a new terminal or rebuild
 
-source /opt/ros/jazzy/setup.bash (for ROS2)
+`source /opt/ros/jazzy/setup.bash (for ROS2)`
 
-source install/setup.bash (for the installs)
+`source install/setup.bash (for the installs)`
 
 Send tradjectory directly to move the servos:
 
+```bash
 ros2 topic pub /arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
 joint_names:
 - joint_1
@@ -128,18 +128,29 @@ joint_names:
 points:
 - positions: [0, 0, 0]
   time_from_start: {sec: 1, nanosec: 0}
-"
+ "
+```
 Control GUI:
-sudo apt install ros-jazzy-rqt-joint-controller-manager
-rqt
+`sudo apt install ros-jazzy-rqt-joint-controller-manager`
+`rqt`
 
 📈 Making Motion Faster
 
-Increase limits
+1. Increase limits
 
-Increase controller rate
+```yaml
+max_velocity: 3.0
+max_acceleration: 6.0
+```
 
-Tune XL430 PID gains (Wizard or YAML)
+2. Increase controller rate
+
+```yaml
+controller_manager:
+  update_rate: 200
+```
+
+3. Tune XL430 PID gains (Wizard or YAML)
 
 🔮 Future Work
 
