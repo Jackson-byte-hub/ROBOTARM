@@ -113,7 +113,7 @@ source install/setup.bash (for the installs)
 Send tradjectory directly to move the servos:
 
 ros2 topic pub /arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
-joint_names:
+$ joint_names:
 - joint_1
 - joint_2
 - joint_3
