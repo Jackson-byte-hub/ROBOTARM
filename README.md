@@ -95,7 +95,9 @@ Click Plan
 Click Execute
 
 ✔ Robot model moves
+
 ✔ Real Dynamixel motors move
+
 ✔ Rviz2 model move accordingly
 
 3. Additional commands for debug
