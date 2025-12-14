@@ -105,13 +105,17 @@ Click Execute
 Build/Rebuild:
 
 colcon build --symlink-install
+
 Remove previous build for a full rebuild:
+
 cd ~/xl430_arm_ws
+
 rm -rf build install log
 
 Sourcing: (you have to do this after open a new terminal or rebuild
 
 source /opt/ros/jazzy/setup.bash (for ROS2)
+
 source install/setup.bash (for the installs)
 
 Send tradjectory directly to move the servos:
