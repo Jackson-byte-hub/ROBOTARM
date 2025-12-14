@@ -105,7 +105,7 @@ Click Execute
 
 ✔ Rviz2 model move accordingly
 
-3. Additional commands for debug
+3. Additional commands
 
 Build/Rebuild:
 
