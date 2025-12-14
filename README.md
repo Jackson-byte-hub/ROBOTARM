@@ -15,17 +15,11 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
 
 ROBOTARM/
 ├── src/
-
 │   ├── arm_description/        # URDF / Xacro
-
 │   ├── arm_bringup/             # ros2_control bringup
-
 │   ├── arm_moveit_config/       # MoveIt 2 configuration
-
 │   ├── dynamixel_hardware_interface/
-
 │   ├── dynamixel_interfaces/
-
 │   └── DynamixelSDK/
 ├── install/
 ├── build/
