@@ -60,11 +60,13 @@ ros2 launch arm_bringup bringup.launch.py
 Verify:
 
 ros2 control list_hardware_interfaces
+
 ros2 control list_controllers
 
 Exepected:
 
 joint_state_broadcaster  active
+
 arm_controller           active
 
 2.1. 🎮 Manual Control (RQT)
