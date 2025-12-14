@@ -27,13 +27,16 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
 📦 Dependencies
 
 `sudo apt update`
-`sudo apt install -y \
+
+```
+sudo apt install -y \
   ros-jazzy-desktop \
   ros-jazzy-ros2-control \
   ros-jazzy-ros2-controllers \
   ros-jazzy-moveit \
   ros-jazzy-xacro \
-  ros-jazzy-joint-state-publisher-gui`
+  ros-jazzy-joint-state-publisher-gui
+```
   
 🛠️ Build the Workspace
 
