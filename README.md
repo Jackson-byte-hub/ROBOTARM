@@ -142,16 +142,16 @@ Control GUI:
 
 📈 Making Motion Faster
 
-1. Increase limits
+1. Increase limits (in `joint_limits.yaml`)
 
-```yaml
+```
 max_velocity: 3.0
 max_acceleration: 6.0
 ```
 
-2. Increase controller rate
+2. Increase controller rate (in `ros2_controllers.yaml`)
 
-```yaml
+```
 controller_manager:
   update_rate: 200
 ```
