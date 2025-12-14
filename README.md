@@ -46,15 +46,16 @@ sudo apt install -y \
   ros-jazzy-joint-state-publisher-gui
 
 🛠️ Build the Workspace
+
 cd ~/xl430_arm_ws
 colcon build --symlink-install
 source install/setup.bash
 
 🔌 Hardware Setup
-
 1. Set unique IDs for each XL430 using Dynamixel Wizard 2.0
 2. Connect motors in daisy chain
 3. Connect OpenRB/U2D2 via USB
+
 Verify device:
 ls /dev/ttyACM*
 
@@ -63,15 +64,21 @@ Expected:
 
 Demo Instruction:
 1. bringup (ros2_control)
+
 ros2 launch arm_bringup bringup.launch.py
+
 Verify:
+
 ros2 control list_hardware_interfaces
 ros2 control list_controllers
+
 Exepected:
+
 joint_state_broadcaster  active
 arm_controller           active
 
 2.1. 🎮 Manual Control (RQT)
+
 ros2 run rqt_joint_trajectory_controller rqt_joint_trajectory_controller
 
 - Select arm_controller
@@ -80,6 +87,7 @@ ros2 run rqt_joint_trajectory_controller rqt_joint_trajectory_controller
 
 2.2. 🤖 MoveIt 2 Demo
 Launch full MoveIt stack
+
 ros2 launch arm_moveit_config demo.launch.py
 
 This starts:
