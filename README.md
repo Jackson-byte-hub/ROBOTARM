@@ -35,6 +35,7 @@ ROBOTARM/
 | MoveIt    | MoveIt 2          |
 
 📦 Dependencies
+
 sudo apt update
 sudo apt install -y \
   ros-jazzy-desktop \
