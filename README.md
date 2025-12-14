@@ -34,10 +34,13 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
   ros-jazzy-moveit \
   ros-jazzy-xacro \
   ros-jazzy-joint-state-publisher-gui`
+  
 🛠️ Build the Workspace
 
 `cd ~/xl430_arm_ws`
+
 `colcon build --symlink-install`
+
 `source install/setup.bash`
 
 🔌 Hardware Setup
