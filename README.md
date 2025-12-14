@@ -121,7 +121,7 @@ source install/setup.bash (for the installs)
 Send tradjectory directly to move the servos:
 
 ros2 topic pub /arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
-$ joint_names:
+joint_names:
 - joint_1
 - joint_2
 - joint_3
@@ -133,3 +133,34 @@ Control GUI:
 sudo apt install ros-jazzy-rqt-joint-controller-manager
 rqt
 
+📈 Making Motion Faster
+
+Increase limits
+
+Increase controller rate
+
+Tune XL430 PID gains (Wizard or YAML)
+
+🔮 Future Work
+
+ Full 6-DOF arm
+
+ Torque control
+
+ Gazebo simulation
+
+ Force sensing
+
+ Gripper integration
+
+ 👤 Author
+
+Jackson
+Robotics / ROS 2 / Embedded Systems
+GitHub: https://github.com/Jackson-byte-hub
+Ref:
+
+https://github.com/ros-controls/ros2_control_demos/blob/master/example_7/doc/userdoc.rst
+https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface?tab=readme-ov-file
+https://github.com/ROBOTIS-GIT/DynamixelSDK
+https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface/blob/main/param/dxl_model/2xc430_w250.model
