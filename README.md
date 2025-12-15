@@ -187,3 +187,5 @@ https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface?tab=readme-ov-file
 https://github.com/ROBOTIS-GIT/DynamixelSDK
 
 https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface/blob/main/param/dxl_model/2xc430_w250.model
+
+https://moveit.picknik.ai/main/doc/examples/setup_assistant/setup_assistant_tutorial.html
