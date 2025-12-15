@@ -40,7 +40,7 @@ sudo apt install -y \
   
 🛠️ Build the Workspace
 
-`cd ~/xl430_arm_ws`
+`cd ~/<YOURWORKSPACE>`
 
 `colcon build --symlink-install`
 
