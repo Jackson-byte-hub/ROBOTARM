@@ -3,7 +3,7 @@ A ROS 2 Jazzy robot arm project using Dynamixel XL430 servos, ros2_control, and 
 This repository demonstrates a full pipeline from URDF → hardware control → RViz → MoveIt planning → real motor motion.
 
 ✨ Features
-ROS 2 Jazzy Jalisco
+ROS 2 Humble
 Dynamixel XL430-W250 servos
 dynamixel_hardware_interface
 ros2_control with joint_trajectory_controller
@@ -30,12 +30,12 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
 
 ```
 sudo apt install -y \
-  ros-jazzy-desktop \
-  ros-jazzy-ros2-control \
-  ros-jazzy-ros2-controllers \
-  ros-jazzy-moveit \
-  ros-jazzy-xacro \
-  ros-jazzy-joint-state-publisher-gui
+  ros-humble-desktop \
+  ros-humble-ros2-control \
+  ros-humble-ros2-controllers \
+  ros-humble-moveit \
+  ros-humble-xacro \
+  ros-humble-joint-state-publisher-gui
 ```
   
 🛠️ Build the Workspace
@@ -119,7 +119,7 @@ Remove previous build for a full rebuild:
 
 Sourcing: (you have to do this after open a new terminal or rebuild
 
-`source /opt/ros/jazzy/setup.bash (for ROS2)`
+`source /opt/ros/humble/setup.bash (for ROS2)`
 
 `source install/setup.bash (for the installs)`
 
