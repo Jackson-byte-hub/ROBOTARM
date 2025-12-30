@@ -30,12 +30,12 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
 
 ```
 sudo apt install -y \
-  ros-jazzy-desktop \
-  ros-jazzy-ros2-control \
-  ros-jazzy-ros2-controllers \
-  ros-jazzy-moveit \
-  ros-jazzy-xacro \
-  ros-jazzy-joint-state-publisher-gui
+  ros-humble-desktop \
+  ros-humble-ros2-control \
+  ros-humble-ros2-controllers \
+  ros-humble-moveit \
+  ros-humble-xacro \
+  ros-humble-joint-state-publisher-gui
 ```
   
 🛠️ Build the Workspace
@@ -126,15 +126,70 @@ Sourcing: (you have to do this after open a new terminal or rebuild
 Send tradjectory directly to move the servos:
 
 ```bash
-ros2 topic pub /arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
+ros2 topic pub -1 /arm_controller/joint_trajectory \
+trajectory_msgs/msg/JointTrajectory \
+"
 joint_names:
 - joint_1
 - joint_2
 - joint_3
+- joint_4
+- joint_5
+- joint_6
 points:
-- positions: [0, 0, 0]
-  time_from_start: {sec: 1, nanosec: 0}
- "
+- positions:
+  - 3.0
+  - 3.0
+  - 3.0
+  - 3.0
+  - 3.0
+  - 3.0
+  time_from_start:
+    sec: 1
+"
+ros2 topic pub -1 /arm_controller/joint_trajectory \
+trajectory_msgs/msg/JointTrajectory \
+"
+joint_names:
+- joint_1
+- joint_2
+- joint_3
+- joint_4
+- joint_5
+- joint_6
+points:
+- positions:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  time_from_start:
+    sec: 1
+"
+ros2 topic pub -1 /arm_controller/joint_trajectory \
+trajectory_msgs/msg/JointTrajectory \
+"
+joint_names:
+- joint_1
+- joint_2
+- joint_3
+- joint_4
+- joint_5
+- joint_6
+points:
+- positions:
+  - 3.0
+  - 3.0
+  - 3.0
+  - 3.0
+  - 3.0
+  - 3.0
+  time_from_start:
+    sec: 1
+"
+
 ```
 Control GUI:
 `sudo apt install ros-jazzy-rqt-joint-controller-manager`
