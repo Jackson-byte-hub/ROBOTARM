@@ -11,7 +11,7 @@ RViz visualization
 MoveIt 2 motion planning and execution
 Scalable from 1 DOF → 3 DOF → 6 DOF
 
-🧱 Repository Structure
+🧱 Repository Structure (might not be updated yet)
 
 <img width="493" height="256" alt="image" src="https://github.com/user-attachments/assets/1906cba9-de58-47c4-b016-8431de0f52b4" />
 
