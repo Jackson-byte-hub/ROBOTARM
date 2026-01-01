@@ -1,9 +1,9 @@
 ROBOTARM – ROS 2 + Dynamixel XL430 + MoveIt 2
-A ROS 2 Jazzy robot arm project using Dynamixel XL430 servos, ros2_control, and MoveIt 2 for motion planning and execution.
+A ROS 2 Humble robot arm project using Dynamixel XL430 servos, ros2_control, and MoveIt 2 for motion planning and execution.
 This repository demonstrates a full pipeline from URDF → hardware control → RViz → MoveIt planning → real motor motion.
 
 ✨ Features
-ROS 2 Jazzy Jalisco
+ROS 2 Humble 
 Dynamixel XL430-W250 servos
 dynamixel_hardware_interface
 ros2_control with joint_trajectory_controller
@@ -18,8 +18,8 @@ Scalable from 1 DOF → 3 DOF → 6 DOF
 ⚙️ System Requirements
 | Component | Version           |
 | --------- | ----------------- |
-| OS        | Ubuntu 24.04      |
-| ROS 2     | Jazzy             |
+| OS        | Ubuntu 22.04      |
+| ROS 2     | Humble            |
 | Dynamixel | XL430-W250        |
 | USB       | OpenRB-150 / U2D2 |
 | MoveIt    | MoveIt 2          |
@@ -113,7 +113,7 @@ Build/Rebuild:
 
 Remove previous build for a full rebuild:
 
-`cd ~/xl430_arm_ws`
+`cd ~/{YOUR WORRKSPACE}`
 
 `rm -rf build install log`
 
@@ -214,8 +214,6 @@ controller_manager:
 3. Tune XL430 PID gains (Wizard or YAML)
 
 🔮 Future Work
-
- Full 6-DOF arm
 
  Torque control
 
